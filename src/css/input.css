@@ -1,0 +1,119 @@
+@import "tailwindcss";
+@import "./header.css";
+@import "./pages/home.css";
+
+@theme {
+  --color-primary: #0b5698;
+  --color-primary-light: #82b0e3;
+  --color-secondary: #000;
+  --color-border: #b1b0b0;
+  --color-body-bg: #f7f7fa;
+  --color-whatsapp: #25d366;
+}
+
+:root {
+  --background: #f7f7fa;
+  --foreground: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* :root {
+    --background: #0c0c0c;
+    --foreground: #ededed;
+  } */
+}
+
+@layer utilities {
+  @keyframes marquee-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee-scroll {
+    animation: marquee-scroll 20s linear infinite;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      /* opacity: 0; */
+      transform: translateY(40px);
+    }
+    to {
+      /* opacity: 1; */
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(150%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .floating-cta {
+    transform: translateX(150%); /* Initial state - off screen */
+  }
+
+  .floating-cta.slide-in-right {
+    animation: slideInRight 0.5s forwards;
+    transition: transform 0.5s ease-in;
+  }
+}
+
+body {
+  background: var(--background);
+  /*color: var(--foreground); */
+  font-family: "Inter", sans-serif;
+
+  &.menu-open {
+    @apply overflow-hidden;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply leading-tight;
+}
+
+.container {
+  @apply max-w-[1320px] mx-auto;
+}
+
+/* Buttons */
+.primary-button {
+  @apply bg-primary min-h-[40px] min-w-fit flex items-center whitespace-nowrap overflow-hidden py-1 lg:py-2 px-4 lg:px-6 text-white text-[1rem] uppercase rounded-[30px] hover:bg-secondary transition-all;
+}
+
+.secondary-button {
+  @apply bg-transparent min-h-[40px] min-w-fit flex items-center whitespace-nowrap overflow-hidden py-1 lg:py-2 px-4 lg:px-6 text-secondary text-[1rem] uppercase border border-secondary rounded-[30px] hover:bg-secondary hover:text-white transition-all;
+}
+.tertiary-button {
+  @apply bg-transparent min-h-[40px] min-w-fit flex items-center whitespace-nowrap overflow-hidden py-1 lg:py-2 px-4 lg:px-6 text-white text-[1rem] uppercase border border-white rounded-[30px] hover:bg-secondary hover:text-white transition-all;
+}
+
+/* Style WYSIWYG content */
+.service-description,
+.faq-content {
+  p {
+    @apply mb-4;
+
+    a {
+      @apply text-primary hover:text-primary-light transition-colors;
+    }
+  }
+}

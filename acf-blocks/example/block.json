@@ -1,0 +1,22 @@
+{
+	"name": "acf/faqs",
+	"title": "Faqs",
+	"description": "Show Selected faqs",
+	"category": "alpha-web-blocks",
+	"icon": "block-default",
+	"style": "acf-faqs-style",
+	"editorStyle": "acf-faqs-editor-style",
+	"script": "acf-faqs-script",
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "faqs.php"
+	},
+	"supports": {
+		"align": true,
+		"anchor": true,
+		"spacing": {
+			"padding": ["top", "bottom"],
+			"margin": ["top", "bottom"]
+		}
+	}
+}

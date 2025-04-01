@@ -1,0 +1,38 @@
+/* HOME HERO */
+body.home {
+  .home-hero {
+    .title {
+      span {
+        @apply text-primary font-bold;
+      }
+    }
+    .description {
+      strong {
+        @apply font-bold text-secondary;
+      }
+    }
+
+    .hero-cta-boxes {
+      .left {
+        img {
+          @apply w-full h-full object-cover;
+        }
+      }
+    }
+
+    .right {
+      img {
+        @apply rounded-lg h-full object-cover;
+      }
+    }
+  }
+
+  /* ABOUT SECTION */
+  .about-us {
+    h3.subtitle {
+      span {
+        @apply italic font-bold;
+      }
+    }
+  }
+}
