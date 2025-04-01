@@ -8,6 +8,8 @@
  * 
  * @since 1.0.0
  */
+if(!defined('ABSPATH')) exit;
+
 function awc_output_head_code() {
     $head_code = wp_kses( get_option('awc_head_code', ''),
         array(

@@ -4,7 +4,7 @@
  *
  * @package Alpha-Web-Consult
  */
-
+if(!defined('ABSPATH')) exit;
 
 /**
  * Echo the copyright text saved in the Advanced Custom Fields options.

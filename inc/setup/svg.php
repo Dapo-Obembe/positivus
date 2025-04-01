@@ -4,6 +4,7 @@
  *
  * @package  Alpha-Web-Consult
  */
+if(!defined('ABSPATH')) exit;
 
 /**
  * Includes the SVG sprite in the footer of the HTML document.

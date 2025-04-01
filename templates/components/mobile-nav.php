@@ -6,6 +6,7 @@
  *
  * @package alphawebplate-tw
  */
+if(!defined('ABSPATH')) exit;
 
  $contact_us_btn = get_field( 'contact_us_btn', 'option' );
 ?>

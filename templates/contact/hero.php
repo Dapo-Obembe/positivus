@@ -5,6 +5,7 @@
  * @package alphawebplate-tw
  * @author Dapo Obembe | https://www.dapoobembe.com
  */
+if(!defined('ABSPATH')) exit;
 
 // ACF DATA for this section.
 $contact_hero_title        = get_field( 'contact_hero_title' );

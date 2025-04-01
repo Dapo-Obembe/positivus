@@ -4,6 +4,8 @@
 *
 * @package Alpha-Web-Consult
 */
+if(!defined('ABSPATH')) exit;
+
 // Function to generate the social share buttons
 function alpha_web_consult_share_buttons() {
     // Ensure to fetch the permalink and title of the current post

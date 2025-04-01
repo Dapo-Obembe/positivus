@@ -2,6 +2,7 @@
 /**
  * Theme scripts and styles declarations.
  */
+if(!defined('ABSPATH')) exit;
 
 // Enqueues style.css on the front.
 if ( ! function_exists( 'awc_tw_plate_scripts' ) ) :

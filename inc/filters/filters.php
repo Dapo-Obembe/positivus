@@ -5,6 +5,7 @@
  * @package Alpha-Web-Consult
  * @since 1.0.0
  */
+if(!defined('ABSPATH')) exit;
 
 /**
  * Show '(No title)' if a post has no title.

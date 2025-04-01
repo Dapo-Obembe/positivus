@@ -4,6 +4,7 @@
  *
  * @package awc-boilerplate
  */
+if(!defined('ABSPATH')) exit;
 
 $post_id = get_the_ID();
 $current_post_type = get_post_type($post_id);

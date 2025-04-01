@@ -8,6 +8,8 @@
  * 
  * @since 1.0.0
  */
+if(!defined('ABSPATH')) exit;
+
 function awc_head_and_footer_code_menu() {
     add_menu_page(
         'awc Head Code',            // Page title

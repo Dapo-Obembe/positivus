@@ -6,6 +6,7 @@
  *
  * @package Alpha-Web-Consult
  */
+if(!defined('ABSPATH')) exit;
 
 /**
  * Remove generator meta tags.

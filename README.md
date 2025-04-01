@@ -105,10 +105,9 @@ This will:
 
 ```
 your-theme-name/
-├── assets/                 # Compiled assets (auto-generated)
+├── dist/                 # Compiled assets (auto-generated)
 │   ├── css/
 │   ├── js/
-│   └── images/
 ├── inc/                    # PHP includes
 │   ├── components/         # Custom functions that act independently of the theme templates
 │   ├── custom-functions/   # Custom functions that act independently of the theme templates
@@ -124,9 +123,9 @@ your-theme-name/
 │   ├── js/                 # JavaScript source files
 │   └── images/             # Image source files
 ├── template/               # Template partials
-│   ├── content/            # Content template parts
-│   ├── header/             # Header template parts
-│   └── footer/             # Footer template parts
+│   ├── components/         # Component template parts
+│   ├── elements/           # Elements used across the website. Remove or leave as is
+│   └── frontpage/          # Files for the frontpage
 ├── acf-json/               # ACF JSON configuration files
 ├── functions.php           # Theme functions
 ├── index.php               # Main template file
@@ -181,19 +180,27 @@ Check the inc/custom-functions for the acf setup function.
 #### ACF Usage Example
 
 ```php
-// Example of using ACF fields in template/content/hero.php
-<div class="hero-section bg-primary text-white py-12">
-    <div class="container mx-auto">
-        <h1 class="text-4xl font-bold">
-            <?php echo get_field('hero_title'); ?>
-        </h1>
-        <?php if (get_field('hero_subtitle')) : ?>
-            <p class="text-xl mt-4">
-                <?php echo get_field('hero_subtitle'); ?>
-            </p>
-        <?php endif; ?>
+// Example of using ACF fields in template/frontpage/hero.php
+// ACF DATA for this section.
+ $home_hero_title = get_field( 'hero_title' );
+ $home_hero_description = get_field( 'hero_description' );
+
+?>
+
+<section class="home-hero w-full px-[1rem] lg:px-[2.5rem] py-8.5 lg:pt-[65px] lg:pb-[75px] -mb-[40px]">
+    <div class="container flex items-stretch  justify-between flex-wrap gap-10 lg:flex-nowrap p-0">
+        <div class="left basis-[100%] lg:basis-[50%]">
+
+            <?php if( $home_hero_title ) : ?>
+                <h1 class="title text-[2.25rem] lg:text-[3.75rem] leading-tight mb-4" fetchpriority="high"><?php echo wp_kses_post( $home_hero_title ); ?></h1>
+            <?php endif; ?>
+            <?php if( $home_hero_description ) : ?>
+                <p class="description text-xl" fetchpriority="high"><?php echo wp_kses_post( $home_hero_description ); ?></p>
+            <?php endif; ?>
+
+        </div>
     </div>
-</div>
+</section>
 ```
 
 ### WordPress Hooks
@@ -207,7 +214,7 @@ Create custom page templates by adding files to the theme directory with the fol
 ```php
 <?php
 /**
- * Template Name: Your Template Name
+ * Page Name: Front Page front-page.php or use home.php
  *
  * @package Your_Theme_Name
  */
@@ -215,7 +222,8 @@ Create custom page templates by adding files to the theme directory with the fol
 get_header();
 ?>
 
-<!-- Your template code here -->
+<!-- Hero section -->
+<?php get_template_part( 'templates/frontpage/hero' ); ?>
 
 <?php get_footer(); ?>
 ```

@@ -4,8 +4,9 @@
  *
  * This template is used for displaying the social icons.
  *
- * @package inc-hub-studio
+ * @package Alpha-Web-Consult
  */
+if(!defined('ABSPATH')) exit;
 
 // Template data.
 $social_icons = get_field( 'site_social_icons', 'option' );

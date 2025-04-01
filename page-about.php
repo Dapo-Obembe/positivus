@@ -6,17 +6,12 @@
  *
  * @package alphawebplate-tw
  */
+if(!defined('ABSPATH')) exit;
 
 get_header();
 ?>
     <!-- Hero section -->
     <?php get_template_part( 'templates/about/hero' ); ?>
-
-    <!-- Solutions Section -->
-    <?php get_template_part( 'templates/about/solutions' ); ?>
-
-    <!-- Vision & Mission Section -->
-    <?php get_template_part( 'templates/about/vision-mission' ); ?>
 
 <?php
 get_footer();

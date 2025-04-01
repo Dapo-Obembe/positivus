@@ -10,7 +10,7 @@
  * 
  * @since 2025
  */
-
+if(!defined('ABSPATH')) exit;
  // FLOATING ACF CTA DATA
 $floating_cta_heading = get_field( 'floating_cta_heading', 'option' );
 $floating_cta_description = get_field( 'floating_cta_description', 'option' );

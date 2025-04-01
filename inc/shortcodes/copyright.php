@@ -5,6 +5,8 @@
  * @package Alpha-Web-Consult
  * @since 1.0.0
  */
+if(!defined('ABSPATH')) exit;
+
 function copyright_year_shortcode( $atts ) {
     // Extract attributes and set default values
     $atts = shortcode_atts( array(

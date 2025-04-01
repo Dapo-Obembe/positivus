@@ -7,7 +7,7 @@
  *
  * @package alpha-web-consult
  */
-
+if(!defined('ABSPATH')) exit;
 /**
  * Add the ACF options page.
  */

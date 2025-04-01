@@ -2,6 +2,7 @@
 /**
  * Theme setup files.
  */
+if(!defined('ABSPATH')) exit;
 
 // Adds theme support for post formats.
 if ( ! function_exists( 'awc_tw_plate_setup' ) ) :

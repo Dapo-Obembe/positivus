@@ -7,7 +7,7 @@
  *
  * @package alpha-web-consult
  */
-
+if(!defined('ABSPATH')) exit;
 // Check if ACF function get_field() exists, if not, define a fallback.
 // if ( ! function_exists( 'get_field' ) ) {
 // 	/**

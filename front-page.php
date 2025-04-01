@@ -10,6 +10,7 @@
  * @package alphawebplate-tw
  * @author Dapo Obembe | https://www.dapoobembe.com
  */
+if(!defined('ABSPATH')) exit;
 
 get_header();
 ?>

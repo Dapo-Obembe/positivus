@@ -2,6 +2,7 @@
 /**
  * Load the recaptcha for CF7 only on the contact page.
  */
+if(!defined('ABSPATH')) exit;
 
 add_action('wp_print_scripts', 'remove_recaptcha_except_contact_page', 100);
 

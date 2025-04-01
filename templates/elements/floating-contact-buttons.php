@@ -11,6 +11,8 @@
  * @since 2025
  */
 
+ if(!defined('ABSPATH')) exit;
+
  // FLOATING CONTACT BUTTON DATA
 $floating_contact_heading = get_field( 'floating_heading', 'option' );
 $send_an_email = get_field( 'send_an_email', 'option' ) ?: 'Send an Email';

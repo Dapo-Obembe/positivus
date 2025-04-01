@@ -4,7 +4,7 @@
  *
  * @package Alpha-Web-Consult
  */
-
+if(!defined('ABSPATH')) exit;
 
 /**
  * Displays numeric pagination on archive pages.

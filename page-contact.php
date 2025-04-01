@@ -6,6 +6,7 @@
  *
  * @package alphawebplate-tw
  */
+if(!defined('ABSPATH')) exit;
 
 get_header();
 ?>

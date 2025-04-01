@@ -8,6 +8,9 @@
  * @since 2025
  * 
  */
+
+ if(!defined('ABSPATH')) exit;
+ 
 function awc_button( $text, $url = '#', $variant = 'primary', $classes = '' ) {
     // Button variants.
     $variants = [

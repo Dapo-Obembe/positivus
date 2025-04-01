@@ -3,6 +3,7 @@
  * This function gets the Google reCaptcha
  * from the backend.
 */
+if(!defined('ABSPATH')) exit;
 /**
  * Get the reCAPTCHA v2 Site Key from theme settings.
  *

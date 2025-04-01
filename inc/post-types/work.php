@@ -5,6 +5,8 @@
  * @package Alpha-Web-Consult
  * @since 1.0.0
  */
+if(!defined('ABSPATH')) exit;
+
 /**
  * This function registers the Custom Work Post type.
  */
