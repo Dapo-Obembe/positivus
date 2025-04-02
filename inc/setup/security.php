@@ -4,7 +4,7 @@
  *
  * Enable or disable certain functionality to harden WordPress.
  *
- * @package Alpha-Web-Consult
+ * @package AlphaWebConsult
  */
 if(!defined('ABSPATH')) exit;
 

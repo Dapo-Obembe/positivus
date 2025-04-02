@@ -2,7 +2,7 @@
 /**
  * Displays numeric pagination on archive pages.
  *
- * @package Alpha-Web-Consult
+ * @package AlphaWebConsult
  */
 if(!defined('ABSPATH')) exit;
 

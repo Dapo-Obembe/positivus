@@ -5,7 +5,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Alpha-Web-Consult
+ * @package AlphaWebConsult
  */
 // ACF DATA for this section.
 $blog_hero_title        = get_field( 'blog_hero_title', 'option' );

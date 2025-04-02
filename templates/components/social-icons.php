@@ -4,7 +4,7 @@
  *
  * This template is used for displaying the social icons.
  *
- * @package Alpha-Web-Consult
+ * @package AlphaWebConsult
  */
 if(!defined('ABSPATH')) exit;
 

@@ -2,7 +2,7 @@
 /**
  * Component: Button
  * 
- * @package Alpha-Web-Consult
+ * @package AlphaWebConsult
  * 
  * @author Dapo Obembe <https://www.dapoobembe.com>
  * @since 2025

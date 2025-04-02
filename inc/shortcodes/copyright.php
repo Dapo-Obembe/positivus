@@ -2,7 +2,7 @@
 /**
  * Shortcode to show the copyright notice.
  *
- * @package Alpha-Web-Consult
+ * @package AlphaWebConsult
  * @since 1.0.0
  */
 if(!defined('ABSPATH')) exit;

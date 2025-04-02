@@ -2,7 +2,7 @@
 /**
  * HERO SECTION - HOME PAGE
  * 
- * @package Alpha-Web-Consult
+ * @package AlphaWebConsult
  * 
  * @author Dapo Obembe <https://www.dapoobembe.com>
  */

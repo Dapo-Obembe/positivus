@@ -2,7 +2,7 @@
 /**
 * Share buttons.
 *
-* @package Alpha-Web-Consult
+* @package AlphaWebConsult
 */
 if(!defined('ABSPATH')) exit;
 
