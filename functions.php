@@ -19,10 +19,11 @@ define( 'AWC_VERSION', wp_get_theme()->get( 'Version' ) );
 
 function include_inc_files() {
 	$files = array(
-		'./inc/components/', // Custom functions that act independently of the theme templates.
+	
 		'./inc/custom-functions/', // Custom functions that act independently of the theme templates.
 		'./inc/google-recaptcha/', // Google recaptcha setup.
 		'./inc/head-and-footer-codes/', // Adds codes/tags to the theme head.
+		'./inc/partials/', // Custom functions re-usable UI elements used across the theme.
 		'./inc/post-types/', // Register all your post types.
 		'./inc/shortcodes/', // Shortcodes used in the theme.
 		'./inc/filters/', // All filtering actions.
