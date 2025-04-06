@@ -27,20 +27,6 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/src/fonts/inter/Inter-VariableFont_slnt,wght.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <?php if(is_front_page() && !wp_is_mobile()) : 
-    $home_hero_image_url = wp_get_attachment_image_url($home_hero_image['ID'], 'large');
-    if($home_hero_image_url) : ?>
-        <link rel="preload" fetchpriority="high" as="image" href="<?php echo esc_url($home_hero_image_url); ?>" type="image/avif">
-    <?php endif;
-    endif; ?>
-
-    <?php if(is_front_page() && wp_is_mobile()) : 
-        $home_hero_box_image_url = wp_get_attachment_image_url($home_hero_box_image['ID'], 'large');
-        if($home_hero_box_image_url) : ?>
-            <link rel="preload" fetchpriority="high" as="image" href="<?php echo esc_url($home_hero_box_image_url); ?>" type="image/avif">
-        <?php endif;
-    endif; ?>
 
 	<?php wp_head(); ?>
     

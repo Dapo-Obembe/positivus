@@ -40,6 +40,7 @@ add_filter('acf/settings/load_json', function( $paths ) {
 /**
  * Register ACF Blocks and enqueue the neccessary styles and scripts.
  */
+if ( function_exists( 'register_acf_blocks' ) ) {
 function register_acf_blocks() {
     $blocks_dir = get_template_directory() . '/acf-blocks/';
     $blocks = array_filter( glob( $blocks_dir . '*' ), 'is_dir' );
@@ -107,5 +108,5 @@ function register_acf_blocks() {
 }
 add_action( 'acf/init', 'register_acf_blocks' );
 
-
+}
 
