@@ -1,14 +1,14 @@
-# Alpha Web Consult WordPress Boilerplate with TailwindCSS
+# AlphaWeb WordPress Tailwind Starter Theme
 
-A modern WordPress + TailwindCss boilerplate for building fast WordPress themes made and managed by [Dapo Obembe](https://www.dapoobembe.com) - founder of [Alpha Web Consult](https://alphawebconsult.com). This lightweight, performance-focused boilerplate provides a solid foundation for custom WordPress theme development with TailwindCss and Advanced Custom Fields (ACF) integration.
+A modern WordPress + TailwindCSS boilerplate for building fast WordPress themes made and managed by [Dapo Obembe](https://www.dapoobembe.com) - founder of [Alpha Web Consult](https://alphawebconsult.com). This lightweight, performance-focused WordPress Tailwind boilerplate provides a solid foundation for custom WordPress theme development with TailwindCss and Advanced Custom Fields (ACF) integration.
 
 There is no overly-complicated set up in the backend.
 
-## Who is this boilerplate for?
+## Who is AlphaWeb WordPress Tailwind starter theme for?
 
-For developers who would love to use WordPress and feel like it is a headless CMS. The data are set up using ACF and all the page structures are done in your code. The Block Editor styles are even dequeued in order to get a better performing WordPress website. Be in control of your WordPress website.
+This WordPress TailwindCSS starter theme is for developers who would love to use WordPress and feel like it is a headless CMS. The data are set up using ACF and all the page structures are done in your code. The Block Editor styles are even dequeued in order to get a better performing WordPress website. Be in control of your WordPress website.
 
-If I can do something with WordPress, is to ensure it is fast without the user spending too much on plugins every year. This approach helps me get at least 80/100 in performance and 100 in other Lighthouse metrics.
+If I can do something with WordPress, is to ensure it is fast. This approach helps me get at least 80/100 in performance and 100 in other Lighthouse metrics.
 
 ## Demo site
 
@@ -31,7 +31,7 @@ Check https://alphawebconsult.com
 - PHP 7.4+
 - Node.js 14+
 - npm or yarn
-- Advanced Custom Fields plugin (PRO is needed if you want repeater and others)
+- Advanced Custom Fields plugin (PRO is needed if you want repeater fields and others)
 - Basic knowledge of PHP, JS, WordPress, TailwindCSS, and ACF
 
 ## Getting Started
