@@ -1,6 +1,6 @@
 # Alpha Web Consult WordPress Boilerplate with TailwindCSS
 
-A modern WordPress classic theme boilerplate for developers who know PHP and TailwindCSS. This lightweight, performance-focused boilerplate provides a solid foundation for custom WordPress theme development with modern frontend tooling and Advanced Custom Fields (ACF) integration.
+A modern WordPress + TailwindCss boilerplate for building fast WordPress themes made and managed by [Dapo Obembe](https://www.dapoobembe.com) - founder of [Alpha Web Consult](https://alphawebconsult.com). This lightweight, performance-focused boilerplate provides a solid foundation for custom WordPress theme development with TailwindCss and Advanced Custom Fields (ACF) integration.
 
 There is no overly-complicated set up in the backend.
 
@@ -176,10 +176,6 @@ NOTE: Haven't properly tested the usage of Tailwind classes in the block editor 
 get_header();
 ?>
 
-<main id="main" class="site-main" role="main">
-
-	<div class="entry-content">
-
 		<?php
 		if ( have_posts() ) {
 
@@ -191,13 +187,8 @@ get_header();
 		}
 		?>
 
-	</div>
-
-</main>
-
 <?php
 get_footer();
-
 
 ```
 
