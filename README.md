@@ -86,6 +86,7 @@ This will:
 
 - Compile TailwindCSS with all classes available for development
 - Watch for changes in your PHP, JS, and CSS files
+- Watch for your svg icons at src/icons/ and bundle to dist/icons/sprite.svg
 
 ### Production Build
 
@@ -105,11 +106,14 @@ This will:
 
 ```
 your-theme-name/
-├── dist/                 # Compiled assets (auto-generated)
+|-- acf-blocks/             # Custom acf blocks you need (See the Note below this section)
+|-- acf-json/               # Your ACF data stored here in JSON immediately you create them in the backend
+├── dist/                   # Compiled assets (auto-generated)
 │   ├── css/
-│   ├── js/
+│   ├── js/                 # (pending)
+|   |-- icons/
 ├── inc/                    # PHP includes
-│   ├── components/         # Custom functions that act independently of the theme templates
+│   ├── partials/           # Reusable functions for items like buttons, img, etc
 │   ├── custom-functions/   # Custom functions that act independently of the theme templates
 │   ├── google-recaptcha/   # Google recaptcha setup
 │   ├── head-and-footer-codes/ # Adds codes/tags to the theme head
@@ -121,14 +125,16 @@ your-theme-name/
 ├── src/                    # Source files
 │   ├── css/                # CSS source files
 │   ├── js/                 # JavaScript source files
-│   └── images/             # Image source files
-├── template/               # Template partials
+│   └── icons/              # SVG icons
+│   └── fonts/              # Fonts
+│   └── sprite.svg          # Sprite for your svg icons
+├── template/               # Template partials for modularization
 │   ├── components/         # Component template parts
 │   ├── elements/           # Elements used across the website. Remove or leave as is
 │   └── frontpage/          # Files for the frontpage
-├── acf-json/               # ACF JSON configuration files
 ├── functions.php           # Theme functions
-├── index.php               # Main template file
+├── index.php               # Main template file/Blog Archive
+├── front-page.php          # Home page (if you set static homepage)
 ├── header.php              # Header template
 ├── footer.php              # Footer template
 ├── sidebar.php             # Sidebar template
@@ -139,8 +145,60 @@ your-theme-name/
 ├── 404.php                 # 404 template
 ├── style.css               # Theme metadata
 ├── tailwind.config.js      # TailwindCSS configuration
+├── webpack.config.js       # Webpack configuration
 ├── package.json            # NPM dependencies and scripts
 └── README.md               # This file
+```
+
+## ACF Block Usage
+
+If you will be using acf blocks in your block editor,
+it means you will need to structure that particular page or pages
+to accommodate blocks. E.g, see the style of the index.php blow that support using blocks.
+
+NOTE: Haven't properly tested the usage of Tailwind classes in the block editor area.
+
+```php
+<?php
+/**
+ * The main template file.
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package AlphaWebConsult
+ */
+
+get_header();
+?>
+
+<main id="main" class="site-main" role="main">
+
+	<div class="entry-content">
+
+		<?php
+		if ( have_posts() ) {
+
+			while ( have_posts() ) {
+				the_post();
+
+				the_content();
+			}
+		}
+		?>
+
+	</div>
+
+</main>
+
+<?php
+get_footer();
+
+
 ```
 
 ## Customization
@@ -303,4 +361,5 @@ This project is licensed under the GPL v2 or later.
 ## Contact
 
 For support or inquiries, please contact [obembedapo@gmail.com].
+
 # solid-unique-music

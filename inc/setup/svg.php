@@ -16,7 +16,7 @@ if(!defined('ABSPATH')) exit;
  */
 function include_svg_sprite() {
 	echo '<div class="svg-sprite" style="display: none;">';
-	include_once get_template_directory() . '/src/sprite.svg';
+	include_once get_template_directory() . '/dist/icons/sprite.svg';
 	echo '</div>';
 }
 add_action( 'wp_footer', 'include_svg_sprite' );

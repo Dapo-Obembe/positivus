@@ -2,13 +2,24 @@
   "name": "solid-unique-music",
   "version": "1.0.0",
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch",
-    "build": "npx @tailwindcss/cli -i ./src/css/input.css -o ./dist/css/tailwind.css --minify"
+    "dev": "npm-run-all2 --parallel dev:tailwind dev:svg",
+    "dev:tailwind": "npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch",
+    "dev:svg": "webpack watch --config webpack.config.js --mode=development",
+    
+    "build": "npm-run-all2 --parallel build:tailwind build:svg",
+    "build:tailwind": "npx @tailwindcss/cli -i ./src/css/input.css -o ./dist/css/tailwind.css --minify",
+    "build:svg": "webpack --config webpack.config.js --mode=production"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "npm-run-all2": "^7.0.2",
     "postcss": "^8.0.0",
-    "tailwindcss": "^4.0.12"
+    "svg-sprite-loader": "^6.0.11",
+    "svgo-loader": "^4.0.0",
+    "tailwindcss": "^4.0.12",
+    "webpack": "^5.99.2",
+    "webpack-cli": "^6.0.1"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.0.12"
