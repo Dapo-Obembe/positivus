@@ -353,7 +353,7 @@ This project is licensed under the GPL v2 or later.
 
 ## Credits
 
-- Built by [Dapo Obembe/Alpha Web Consult]
+- Built by [Dapo Obembe/Alpha Web Consult]: https://www.dapoobembe.com
 - TailwindCSS: https://tailwindcss.com
 - WordPress: https://wordpress.org
 - Advanced Custom Fields: https://www.advancedcustomfields.com
@@ -361,5 +361,3 @@ This project is licensed under the GPL v2 or later.
 ## Contact
 
 For support or inquiries, please contact [obembedapo@gmail.com].
-
-# solid-unique-music
