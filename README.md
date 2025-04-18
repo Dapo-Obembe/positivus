@@ -17,7 +17,7 @@ Check https://alphawebconsult.com
 ## Features
 
 - 🎨 TailwindCSS integration for utility-first styling
-- 🧩 Advanced Custom Fields (ACF) support and integration
+- 🧩 Advanced Custom Fields (ACF) or Secure Custom Fields (SCF) support and integration
 - 📱 Responsive design out of the box
 - 🔍 SEO-friendly structure
 - 🔒 Security best practices
@@ -42,7 +42,7 @@ Check https://alphawebconsult.com
 
    ```bash
    cd wp-content/themes/
-   git clone https://github.com/Dapo-Obembe/solid-unique-music.git your-theme-name
+   git clone https://github.com/Dapo-Obembe/alphawebplate-tw.git your-theme-name
    cd your-theme-name
    ```
 
