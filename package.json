@@ -1,5 +1,5 @@
 {
-  "name": "solid-unique-music",
+  "name": "alphawebplate-tw",
   "version": "1.0.0",
   "scripts": {
     "dev": "npm-run-all2 --parallel dev:tailwind dev:svg",
