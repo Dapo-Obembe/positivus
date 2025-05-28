@@ -6,7 +6,9 @@ yarn-error.log*
 package-lock.json
 yarn.lock
 
-# Gulp and build files
+# build files
+dist
+dist/icons/svgSprite.js
 sourcemaps/
 *.map
 

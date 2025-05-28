@@ -127,8 +127,9 @@ your-theme-name/
 │   ├── js/                 # JavaScript source files
 │   └── icons/              # SVG icons
 │   └── fonts/              # Fonts
+│   └── swiperjs/           # SwiperJs files
 │   └── sprite.svg          # Sprite for your svg icons
-├── template/               # Template partials for modularization
+├── template-parts/         # Template partials for modularization
 │   ├── components/         # Component template parts
 │   ├── elements/           # Elements used across the website. Remove or leave as is
 │   └── frontpage/          # Files for the frontpage
