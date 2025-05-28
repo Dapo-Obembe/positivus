@@ -78,7 +78,7 @@
             </nav>
             
             <!--Mobile Nav-->
-            <?php get_template_part( 'templates/components/mobile-nav' ); ?>
+            <?php get_template_part( 'template-parts/components/mobile-nav' ); ?>
         </div>
     </header>
     <main id="main" class="site-main mt-0 mb-0" role="main">

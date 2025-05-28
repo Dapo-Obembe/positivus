@@ -15,10 +15,10 @@ if(!defined('ABSPATH')) exit;
 get_header();
 ?>
     <!-- Hero section -->
-    <?php get_template_part( 'templates/frontpage/hero' ); ?>
+    <?php get_template_part( 'template-parts/frontpage/hero' ); ?>
 
     <!-- Recent Posts -->
-    <?php get_template_part( 'templates/frontpage/recent-posts' ); ?>  
+    <?php get_template_part( 'template-parts/frontpage/recent-posts' ); ?>  
 
 <?php
 get_footer();

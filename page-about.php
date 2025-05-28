@@ -11,7 +11,7 @@ if(!defined('ABSPATH')) exit;
 get_header();
 ?>
     <!-- Hero section -->
-    <?php get_template_part( 'templates/about/hero' ); ?>
+    <?php get_template_part( 'template-parts/about/hero' ); ?>
 
 <?php
 get_footer();

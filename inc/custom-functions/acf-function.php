@@ -41,72 +41,72 @@ add_filter('acf/settings/load_json', function( $paths ) {
  * Register ACF Blocks and enqueue the neccessary styles and scripts.
  */
 if ( function_exists( 'register_acf_blocks' ) ) {
-function register_acf_blocks() {
-    $blocks_dir = get_template_directory() . '/acf-blocks/';
-    $blocks = array_filter( glob( $blocks_dir . '*' ), 'is_dir' );
+    function register_acf_blocks() {
+        $blocks_dir = get_template_directory() . '/acf-blocks/';
+        $blocks = array_filter( glob( $blocks_dir . '*' ), 'is_dir' );
 
-    foreach ( $blocks as $block ) {
-        $block_json_path = $block . '/block.json';
+        foreach ( $blocks as $block ) {
+            $block_json_path = $block . '/block.json';
 
-        // Skip blocks without block.json.
-        if ( ! file_exists( $block_json_path ) ) {
-            continue;
+            // Skip blocks without block.json.
+            if ( ! file_exists( $block_json_path ) ) {
+                continue;
+            }
+
+            // Parse block.json.
+            $block_args = json_decode( file_get_contents( $block_json_path ), true );
+
+            // Automatically handle template path.
+            if ( isset( $block_args['acf']['renderTemplate'] ) ) {
+                $block_args['render_template'] = "$block/{$block_args['acf']['renderTemplate']}";
+                unset( $block_args['acf']['renderTemplate'] );
+            }
+
+            // Enqueue styles and scripts.
+            $block_args['enqueue_assets'] = function() use ( $block ) {
+                $block_name = basename( $block );
+
+                // Enqueue frontend style.
+                if ( file_exists( "$block/style.css" ) ) {
+                    wp_enqueue_style(
+                        "acf-{$block_name}-style",
+                        get_template_directory_uri() . "/acf-blocks/{$block_name}/style.css",
+                        array(),
+                        '1.0.0'
+                    );
+                    wp_enqueue_style( 'swiper-style', get_template_directory_uri() . '/src/swiperjs/swiper-bundle.min.css', array(), null, 'all' );
+
+                }
+
+                // Enqueue editor style.
+                if ( file_exists( "$block/editor.css" ) ) {
+                    wp_enqueue_style(
+                        "acf-{$block_name}-editor-style",
+                        get_template_directory_uri() . "/acf-blocks/{$block_name}/editor.css",
+                        array(),
+                        '1.0.0'
+                    );
+                }
+
+                // Enqueue script.
+                if ( file_exists( "$block/script.js" ) ) {
+                    wp_enqueue_script(
+                        "acf-{$block_name}-script",
+                        get_template_directory_uri() . "/acf-blocks/{$block_name}/script.js",
+                        array( 'wp-blocks', 'wp-element', 'wp-editor' ),
+                        '1.0.0',
+                        true
+                    );
+                
+                    wp_enqueue_script( 'swiper-script', get_template_directory_uri() . '/src/swiperjs/swiper-bundle.min.js', array('jquery'), null, true ); // phpcs:ignore.
+                }
+            };
+
+            // Register the block with ACF.
+            acf_register_block_type( $block_args );
         }
-
-        // Parse block.json.
-        $block_args = json_decode( file_get_contents( $block_json_path ), true );
-
-        // Automatically handle template path.
-        if ( isset( $block_args['acf']['renderTemplate'] ) ) {
-            $block_args['render_template'] = "$block/{$block_args['acf']['renderTemplate']}";
-            unset( $block_args['acf']['renderTemplate'] );
-        }
-
-        // Enqueue styles and scripts.
-        $block_args['enqueue_assets'] = function() use ( $block ) {
-            $block_name = basename( $block );
-
-            // Enqueue frontend style.
-            if ( file_exists( "$block/style.css" ) ) {
-                wp_enqueue_style(
-                    "acf-{$block_name}-style",
-                    get_template_directory_uri() . "/acf-blocks/{$block_name}/style.css",
-                    array(),
-                    '1.0.0'
-                );
-                wp_enqueue_style( 'swiper-style', 'https://unpkg.com/swiper/swiper-bundle.min.css', array(), null, 'all' );
-
-            }
-
-            // Enqueue editor style.
-            if ( file_exists( "$block/editor.css" ) ) {
-                wp_enqueue_style(
-                    "acf-{$block_name}-editor-style",
-                    get_template_directory_uri() . "/acf-blocks/{$block_name}/editor.css",
-                    array(),
-                    '1.0.0'
-                );
-            }
-
-            // Enqueue script.
-            if ( file_exists( "$block/script.js" ) ) {
-                wp_enqueue_script(
-                    "acf-{$block_name}-script",
-                    get_template_directory_uri() . "/acf-blocks/{$block_name}/script.js",
-                    array( 'wp-blocks', 'wp-element', 'wp-editor' ),
-                    '1.0.0',
-                    true
-                );
-               
-                wp_enqueue_script( 'swiper-script', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), null, true ); // phpcs:ignore.
-            }
-        };
-
-        // Register the block with ACF.
-        acf_register_block_type( $block_args );
     }
-}
-add_action( 'acf/init', 'register_acf_blocks' );
+    add_action( 'acf/init', 'register_acf_blocks' );
 
 }
 

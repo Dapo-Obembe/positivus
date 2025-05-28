@@ -11,10 +11,10 @@ if(!defined('ABSPATH')) exit;
 get_header();
 ?>
     <!-- Hero section -->
-    <?php get_template_part( 'templates/contact/hero' ); ?>
+    <?php get_template_part( 'template-parts/contact/hero' ); ?>
 
     <!-- Form Wrapper -->
-    <?php get_template_part( 'templates/contact/form-wrapper' ); ?>
+    <?php get_template_part( 'template-parts/contact/form-wrapper' ); ?>
 
 
 <?php
