@@ -1,15 +1,14 @@
 {
-	"name": "acf/faqs",
-	"title": "Faqs",
-	"description": "Show Selected faqs",
+	"name": "acf/example",
+	"title": "Example",
+	"description": "Show Example Block",
 	"category": "alpha-web-blocks",
 	"icon": "block-default",
-	"style": "acf-faqs-style",
-	"editorStyle": "acf-faqs-editor-style",
-	"script": "acf-faqs-script",
+	"style": ["acf-tailwind-style", "file:./style.css"],
+	"script": ["example-script"],
 	"acf": {
 		"mode": "preview",
-		"renderTemplate": "faqs.php"
+		"renderTemplate": "example.php"
 	},
 	"supports": {
 		"align": true,

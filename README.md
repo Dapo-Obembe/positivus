@@ -46,13 +46,15 @@ Check https://alphawebconsult.com
    cd your-theme-name
    ```
 
-2. Install dependencies:
+2. IMPORTANT: Change every instances of https://swiftplate.loocal to your wordpress local URL.
+
+3. Install dependencies:
 
    ```bash
    npm install
    ```
 
-3. Update `style.css` with your theme information:
+4. Update `style.css` with your theme information:
 
    ```css
    /*
@@ -68,9 +70,9 @@ Check https://alphawebconsult.com
    */
    ```
 
-4. Ensure Advanced Custom Fields Pro is installed and activated.
+5. Ensure ACF PRO or Secured Custom Fields is installed and activated.
 
-5. Activate the theme in the WordPress admin panel.
+6. Activate the theme in the WordPress admin panel.
 
 ## Development Workflow
 
@@ -87,6 +89,7 @@ This will:
 - Compile TailwindCSS with all classes available for development
 - Watch for changes in your PHP, JS, and CSS files
 - Watch for your svg icons at src/icons/ and bundle to dist/icons/sprite.svg
+- You can then access your work on http://localhost:9000
 
 ### Production Build
 
@@ -155,7 +158,7 @@ your-theme-name/
 
 If you will be using acf blocks in your block editor,
 it means you will need to structure that particular page or pages
-to accommodate blocks. E.g, see the style of the index.php blow that support using blocks.
+to accommodate blocks. E.g, see the style of the index.php below that support using blocks.
 
 NOTE: Haven't properly tested the usage of Tailwind classes in the block editor area.
 
