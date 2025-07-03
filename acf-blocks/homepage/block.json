@@ -1,14 +1,14 @@
 {
-	"name": "acf/example",
-	"title": "Example",
-	"description": "Show Example Block",
+	"name": "acf/homepage",
+	"title": "Homepage",
+	"description": "Show Ready-made Homepage Block",
 	"category": "alpha-web-blocks",
 	"icon": "block-default",
 	"style": ["awc-tailwind-style", "file:./style.css"],
-	"script": ["example-script"],
+	"script": ["homepage-script"],
 	"acf": {
 		"mode": "preview",
-		"renderTemplate": "example.php"
+		"renderTemplate": "homepage.php"
 	},
 	"supports": {
 		"align": true,

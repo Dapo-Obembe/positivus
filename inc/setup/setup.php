@@ -112,7 +112,7 @@ if ( ! function_exists( 'awc_tw_plate_editor_style' ) ) :
 	 * @return void
 	 */
 	function awc_tw_plate_editor_style() {
-		add_editor_style( get_parent_theme_file_uri( 'src/css/output.css' ) );
+		add_editor_style( get_parent_theme_file_uri( 'assets/css/output.css' ) );
 	}
 endif;
 add_action( 'after_setup_theme', 'awc_tw_plate_editor_style' );

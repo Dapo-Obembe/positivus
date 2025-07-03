@@ -13,12 +13,12 @@ if(!defined('ABSPATH')) exit;
  */
 if ( function_exists( 'acf_add_options_page' ) ) {
 	acf_add_options_page( array(
-		'page_title'  => 'Theme Settings', // Title displayed on the options page.
-		'menu_title'  => 'Theme Settings', // Title displayed in the WordPress admin menu.
+		'page_title'  => 'Website Settings', // Title displayed on the options page.
+		'menu_title'  => 'Website Settings', // Title displayed in the WordPress admin menu.
 		'menu_slug'   => 'theme-settings', // The slug for the menu item.
 		'capability'  => 'manage_options', // Capability required to access the page.
 		'redirect'    => false,            // Keep the user on the same page after saving.
-        'position'     => 16
+        'position'     => 60
 	) );
 }
 
@@ -37,11 +37,12 @@ add_filter('acf/settings/load_json', function( $paths ) {
     return $paths;
 });
 
+
 /**
- * Register ACF Blocks and enqueue the neccessary styles and scripts.
+ * AWC Blocks registration.
  */
-function acf_block_registration(){
-    $blocks_dir = ACF_DIR . 'acf-blocks/';
+function awc_block_registration(){
+    $blocks_dir = get_stylesheet_directory() . '/acf-blocks/';
     $block_folders = glob($blocks_dir . '*', GLOB_ONLYDIR);
 
 
@@ -51,7 +52,7 @@ function acf_block_registration(){
         }
     }
 }
-add_action( 'init', 'acf_block_registration' );
+add_action( 'acf/init', 'awc_block_registration' );
 
 /**
  * Register the Blocks Style and Script
@@ -62,19 +63,19 @@ add_action( 'init', 'acf_block_registration' );
 function register_script_for_block(){
     
     // Register Swiper assets once, so any block can declare them as a dependency.
-    wp_register_style( 'swiper-style', get_stylesheet_directory_uri() . '/src/swiperjs/swiper-bundle.min.css', array(), null );
-    wp_register_script( 'swiper-script', get_stylesheet_directory_uri() . 'src//swiperjs/swiper-bundle.min.js', array(), null, true );
+    wp_register_style( 'swiper-style', get_stylesheet_directory_uri() . '/assets/swiperjs/swiper-bundle.min.css', array(), null );
+    wp_register_script( 'swiper-script', get_stylesheet_directory_uri() . '/assets/swiperjs/swiper-bundle.min.js', array(), null, true );
 
     // Check if we are local environment.
     $is_local = wp_get_environment_type() === 'local';
 
     // Register Tailwind based on the environment.
-    $path = $is_local ? get_stylesheet_directory() . 'src/css/output.css' : get_stylesheet_directory() . 'dist/css/tailwind.css';
-    $uri = $is_local ? get_stylesheet_directory_uri() . 'src/css/output.css' : get_stylesheet_directory_uri() . 'dist/css/tailwind.css';
+    $path = $is_local ? get_stylesheet_directory() . '/assets/css/output.css' : get_stylesheet_directory() . 'dist/css/tailwind.css';
+    $uri = $is_local ? get_stylesheet_directory_uri() . '/assets/css/output.css' : get_stylesheet_directory_uri() . 'dist/css/tailwind.css';
 
     if ( file_exists( $path ) ) {
         wp_register_style(
-            'acf-tailwind-style',
+            'awc-tailwind-style',
             $uri,
             array(),
             filemtime( $path ),
@@ -83,10 +84,10 @@ function register_script_for_block(){
 
     } 
      
-    $blocks_dir = get_stylesheet_directory(  ) . 'acf-blocks/';
-    $blocks_uri = get_stylesheet_directory_uri() . 'acf-blocks/';
+    $blocks_dir = get_stylesheet_directory() . '/acf-blocks/';
+    $blocks_uri = get_stylesheet_directory_uri() . '/acf-blocks/';
 
-    // Find all subdirectories inside acf-blocks/
+    // Find all subdirectories inside awc-blocks/
     $block_folders = glob($blocks_dir . '*', GLOB_ONLYDIR);
 
     foreach( $block_folders as $block_path ) {
