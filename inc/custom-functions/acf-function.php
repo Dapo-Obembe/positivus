@@ -17,8 +17,8 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 		'menu_title'  => 'Theme Settings', // Title displayed in the WordPress admin menu.
 		'menu_slug'   => 'theme-settings', // The slug for the menu item.
 		'capability'  => 'manage_options', // Capability required to access the page.
-        'parent_slug' => 'themes.php',
 		'redirect'    => false,            // Keep the user on the same page after saving.
+        'position'     => 16
 	) );
 }
 
