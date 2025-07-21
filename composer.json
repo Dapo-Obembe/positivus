@@ -1,0 +1,21 @@
+{
+  "name": "alphawebconsult/wp-phpcs-setup",
+  "description": "WordPress PHPCS setup with no deprecated sniffs",
+  "type": "project",
+  "require-dev": {
+    "squizlabs/php_codesniffer": "3.9.2",
+    "wp-coding-standards/wpcs": "^3.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
+  },
+  "scripts": {
+    "lint": "vendor/bin/phpcs",
+    "fix": "vendor/bin/phpcbf"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

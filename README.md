@@ -103,17 +103,26 @@ This will:
 
 - Minify and optimize all assets
 - Purge unused TailwindCSS classes
-- Generate production CSS file in the dist/
+- Generate production CSS and JS files in the dist/
+
+### WPCS & PHPCS Setup
+
+If you want your code (for theme) to follow the WPCS (WordPress Coding standards):
+
+1. Run `composer install`
+2. Ensure you install and activate these extensions (php snifer by wongjn and phpcs by shevaua) installed
+3. Then you can lint and fix via: `composer lint` and `composer fix`
 
 ## Theme Structure
 
 ```
 your-theme-name/
+|-- .vscode/                # settings for WPCS
 |-- acf-blocks/             # Custom acf blocks you need (See the Note below this section)
 |-- acf-json/               # Your ACF data stored here in JSON immediately you create them in the backend
 ├── dist/                   # Compiled assets (auto-generated)
 │   ├── css/
-│   ├── js/                 # (pending)
+│   ├── js/                 # css and js compiled/bundled
 |   |-- icons/
 ├── inc/                    # PHP includes
 │   ├── partials/           # Reusable functions for items like buttons, img, etc
@@ -148,6 +157,7 @@ your-theme-name/
 ├── search.php              # Search template
 ├── 404.php                 # 404 template
 ├── style.css               # Theme metadata
+├── composer.json           # Composer set up for WPCS
 ├── tailwind.config.js      # TailwindCSS configuration
 ├── webpack.config.js       # Webpack configuration
 ├── package.json            # NPM dependencies and scripts
