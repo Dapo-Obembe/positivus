@@ -37,7 +37,7 @@ function print_numeric_pagination( $args = array(), $query = null ) {
 	}
 	?>
 
-	<nav class="pagination-container mt-8 flex flex-nowrap gap-4 justify-center items-center has-[a]:text-2xl has-[a]:font-bold  [&_.current]:text-primary" aria-label="<?php esc_attr_e( 'numeric pagination', 'alphawebplate-tw' ); ?>">
+	<nav class="pagination-container mt-8 flex flex-nowrap gap-4 justify-center items-center has-[a]:text-2xl has-[a]:font-bold  [&_.current]:text-primary" aria-label="<?php esc_attr_e( 'numeric pagination', 'positivus' ); ?>">
 		<?php echo paginate_links( $args ); // phpcs:ignore ?>
 	</nav>
 

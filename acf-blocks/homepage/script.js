@@ -1,9 +1,9 @@
 initHomeHero = function () {
-    console.log('Hello world');
-}
+  console.log("Hello world");
+};
 
 if (window.acf) {
-    window.acf.addAction('render_block_preview/type=homepage', initHomeHero);
+  window.acf.addAction("render_block_preview/type=homepage", initHomeHero);
 } else {
-    document.addEventListener('DOMContentLoaded', initHomeHero);
+  document.addEventListener("DOMContentLoaded", initHomeHero);
 }

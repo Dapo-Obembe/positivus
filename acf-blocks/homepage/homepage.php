@@ -24,18 +24,18 @@ if ( ! empty( $block['align'] ) ) {
 	$block_class .= ' align' . $block['align'];
 }
 
-// Rendering in inserter home-page
-if (isset($block['data']['preview_home-page_help'])) : 
-    echo '<img src="' . $block['data']['preview_home-page_help'] . '" style="width:100%; height:auto;">';
+// Rendering in inserter home-page.
+if ( isset( $block['data']['preview_home-page_help'] ) ) :
+	echo '<img src="' . $block['data']['preview_home-page_help'] . '" style="width:100%; height:auto;">';
 
 else :
 
 
-?>
+	?>
 
 <div id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $block_class ); ?>">
-    <!-- Home Hero -->   
-    <?php echo awc_include_block_section('homepage', 'hero'); ?>
+	<!-- Home Hero -->   
+	<?php echo awc_include_block_section( 'homepage', 'hero' ); ?>
   
 </div>
 

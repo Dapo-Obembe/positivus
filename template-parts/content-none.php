@@ -10,19 +10,19 @@
 <section class="no-results not-found">
 
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'alphawebplate-tw' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'positivus' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
 		<?php if ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'alphawebplate-tw' ); ?></p>
+			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'positivus' ); ?></p>
 
 			<?php get_search_form(); ?>
 
 		<?php else : ?>
 
-			<p><?php esc_html_e( 'It seems we can’t find what you’re looking for. Perhaps searching can help.', 'alphawebplate-tw' ); ?></p>
+			<p><?php esc_html_e( 'It seems we can’t find what you’re looking for. Perhaps searching can help.', 'positivus' ); ?></p>
 
 			<?php get_search_form(); ?>
 

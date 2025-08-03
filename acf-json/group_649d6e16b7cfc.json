@@ -26,7 +26,7 @@
             "name": "contact_us_btn",
             "aria-label": "",
             "type": "link",
-            "instructions": "",
+            "instructions": "This is instruction",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -34,7 +34,8 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "return_format": "array",
+            "allow_in_bindings": 1
         },
         {
             "key": "field_649d6e17f38e6",
@@ -216,7 +217,9 @@
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
-                    "parent_repeater": "field_649da6c5399e5"
+                    "parent_repeater": "field_649da6c5399e5",
+                    "create_options": 0,
+                    "save_options": 0
                 }
             ]
         },
@@ -235,7 +238,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6750cffdeebdc",
@@ -297,7 +301,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_67d2d819fda0b",
@@ -445,7 +450,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_67d1b29e603c2",
@@ -571,7 +577,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_67e654a0bcad5",
@@ -628,7 +635,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_67e6645932166",
@@ -685,7 +693,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_67e9af5c45226",
@@ -770,7 +779,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_67e9bba2ae7c5",
@@ -847,5 +857,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743371236
+    "modified": 1754084947
 }

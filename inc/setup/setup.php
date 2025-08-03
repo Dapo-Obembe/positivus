@@ -1,15 +1,21 @@
 <?php
 /**
  * Theme setup files.
+ *
+ * @package AlphaWebConsult
  */
-if(!defined('ABSPATH')) exit;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 // Adds theme support for post formats.
 if ( ! function_exists( 'awc_tw_plate_setup' ) ) :
 
-	/* Add theme support for title tag
+	/**
+	* Add theme support for title tag
 	*/
-    add_theme_support( 'title-tag' );
+	add_theme_support( 'title-tag' );
 	/**
 	 * Adds theme support for post formats.
 	 *
@@ -31,8 +37,8 @@ if ( ! function_exists( 'awc_tw_plate_setup' ) ) :
 	// Register navigation menus.
 	register_nav_menus(
 		array(
-			'primary' => esc_html__( 'Primary Menu', 'alphawebplate-tw' ),
-			'footer'  => esc_html__( 'Footer Menu', 'alphawebplate-tw' ),
+			'primary' => esc_html__( 'Primary Menu', 'positivus' ),
+			'footer'  => esc_html__( 'Footer Menu', 'positivus' ),
 		)
 	);
 
@@ -74,22 +80,22 @@ if ( ! function_exists( 'awc_tw_plate_setup' ) ) :
 		'editor-font-sizes',
 		array(
 			array(
-				'name' => __( 'Small', 'alphawebplate-tw' ),
+				'name' => __( 'Small', 'positivus' ),
 				'size' => 12,
 				'slug' => 'small',
 			),
 			array(
-				'name' => __( 'Normal', 'alphawebplate-tw' ),
+				'name' => __( 'Normal', 'positivus' ),
 				'size' => 16,
 				'slug' => 'normal',
 			),
 			array(
-				'name' => __( 'Large', 'alphawebplate-tw' ),
+				'name' => __( 'Large', 'positivus' ),
 				'size' => 36,
 				'slug' => 'large',
 			),
 			array(
-				'name' => __( 'Huge', 'alphawebplate-tw' ),
+				'name' => __( 'Huge', 'positivus' ),
 				'size' => 50,
 				'slug' => 'huge',
 			),
@@ -101,18 +107,3 @@ if ( ! function_exists( 'awc_tw_plate_setup' ) ) :
 
 endif;
 add_action( 'after_setup_theme', 'awc_tw_plate_setup' );
-
-// Enqueues editor-style.css in the editors.
-if ( ! function_exists( 'awc_tw_plate_editor_style' ) ) :
-	/**
-	 * Enqueues editor-style.css in the editors.
-	 *
-	 * @since 1.0
-	 *
-	 * @return void
-	 */
-	function awc_tw_plate_editor_style() {
-		add_editor_style( get_parent_theme_file_uri( 'assets/css/output.css' ) );
-	}
-endif;
-add_action( 'after_setup_theme', 'awc_tw_plate_editor_style' );

@@ -44,8 +44,8 @@ if ($related_posts->have_posts()) : ?>
         <div class="container">
             <?php 
             $title = ($current_post_type === 'work') 
-                ? __('Related Works', 'alphawebplate-tw') 
-                : __('Related Posts', 'alphawebplate-tw');
+                ? __('Related Works', 'positivus') 
+                : __('Related Posts', 'positivus');
             ?>
             <h2 class="related-posts__title text-white text-2xl lg:text-4xl font-bold mb-6"><?php echo esc_html($title); ?></h2>
             

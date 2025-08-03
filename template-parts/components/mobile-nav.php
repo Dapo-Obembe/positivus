@@ -4,14 +4,14 @@
  *
  * This template is used for displaying the mobile navigation.
  *
- * @package alphawebplate-tw
+ * @package positivus
  */
 if(!defined('ABSPATH')) exit;
 
  $contact_us_btn = get_field( 'contact_us_btn', 'option' );
 ?>
 
-<button class="menu-toggle lg:hidden" aria-expanded="false" aria-label="<?php esc_attr_e( 'Menu', 'alphawebplate-tw' ); ?>">
+<button class="menu-toggle lg:hidden" aria-expanded="false" aria-label="<?php esc_attr_e( 'Menu', 'positivus' ); ?>">
 	<?php
 	the_svg(
 		array(
