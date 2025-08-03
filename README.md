@@ -42,7 +42,7 @@ Check https://alphawebconsult.com
 
    ```bash
    cd wp-content/themes/
-   git clone https://github.com/Dapo-Obembe/alphawebplate-tw.git your-theme-name
+   git clone https://github.com/Dapo-Obembe/positivus.git your-theme-name
    cd your-theme-name
    ```
 
@@ -366,3 +366,4 @@ This project is licensed under the GPL v2 or later.
 ## Contact
 
 For support or inquiries, please contact [obembedapo@gmail.com].
+# positivus
