@@ -89,7 +89,7 @@ This will:
 - Compile TailwindCSS with all classes available for development
 - Watch for changes in your PHP, JS, and CSS files
 - Watch for your svg icons at src/icons/ and bundle to dist/icons/sprite.svg
-- You can then access your work on http://localhost:9000
+- You can then access your work on http://localhost:3000
 
 ### Production Build
 
@@ -366,4 +366,5 @@ This project is licensed under the GPL v2 or later.
 ## Contact
 
 For support or inquiries, please contact [obembedapo@gmail.com].
+
 # positivus

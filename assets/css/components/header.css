@@ -1,18 +1,18 @@
 .site-logo {
   img {
-    @apply w-[80px] h-auto;
+    @apply w-[219.54px] h-[56px];
   }
 }
 
 .header-navigation {
   ul {
-    @apply flex items-center gap-8;
+    @apply flex items-center gap-10;
 
     li {
-      @apply text-[1rem] uppercase hover:text-primary transition-all;
+      @apply text-xl leading-7 capitalize hover:text-primary transition-all;
     }
     li.current-menu-item {
-      @apply font-bold text-primary underline underline-offset-4;
+      @apply font-bold text-secondary underline underline-offset-4;
     }
   }
 }

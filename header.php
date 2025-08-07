@@ -31,7 +31,7 @@ $contact_us_btn = get_field( 'contact_us_btn', 'option' );
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 
-	<header class="min-h-[80px] flex items-center pb-0 border-b-2 border-secondary bg-body-bg sticky z-99999 top-0 px-[1rem] lg:px-[2.5rem]">
+	<header class="min-h-[68px] flex items-center pb-0 mt-15 border-b-2 border-secondary bg-body-bg sticky z-99999 top-0 px-[1rem] lg:px-[2.5rem]">
 		<div class="container mx-auto flex justify-between items-center">
 			<!-- Logo -->
 			<div class="site-logo">
@@ -63,13 +63,12 @@ $contact_us_btn = get_field( 'contact_us_btn', 'option' );
 					<?php
 					if ( ! empty( $contact_us_btn ) ) :
 						$link_url    = $contact_us_btn['url'];
-						$link_title  = $contact_us_btn['title'];
+						$link_title  = $contact_us_btn['title']; // phpcs:ignore
 						$link_target = $contact_us_btn['target'] ? $contact_us_btn['target'] : '_self';
 						?>
-						<a  href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" role="button" class="primary-button">
-						<?php echo esc_html( $link_title ); ?>
-						</a>
-					<?php endif; ?>
+						<?php echo awc_button( $link_title, $link_url, 'secondary' ); // phpcs:ignore
+					endif;
+					?>
 
 				</div>
 				

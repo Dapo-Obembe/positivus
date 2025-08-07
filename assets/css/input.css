@@ -81,7 +81,7 @@
   }
 }
 
-body {
+body:not(.wp-admin) {
   background: var(--background);
   font-family: "Space Grotesk";
 
@@ -123,5 +123,5 @@ h2 {
 }
 
 .container {
-  @apply max-w-[1320px] mx-auto;
+  @apply max-w-[1240px] mx-auto;
 }

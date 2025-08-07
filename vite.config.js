@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import path from "path";
 import { globSync } from "glob";
-import viteSvgSprite from "vite-plugin-svg-sprite";
 
 // Get all JS entry points from the pages directory, plus the main entry
 const entries = globSync("./assets/js/pages/*.js").reduce(
@@ -21,15 +20,7 @@ export default defineConfig(({ command }) => {
     base: isDevelopment ? "/" : "/dist/",
 
     // Define plugins
-    plugins: [
-      // Plugin for creating SVG sprites, similar to svg-sprite-loader
-      viteSvgSprite({
-        // The directory where your icons are located
-        include: "**/assets/icons/**/*.svg",
-        // Options for the sprite generation
-        symbolId: "icon-[name]",
-      }),
-    ],
+    plugins: [],
 
     // Configuration for the build process
     build: {
@@ -65,7 +56,7 @@ export default defineConfig(({ command }) => {
     // Configuration for the development server
     server: {
       // The port for the dev server
-      port: 9000,
+      port: 3000,
       // Enable strict port checking
       strictPort: true,
       // Enable Hot Module Replacement (HMR)

@@ -6,6 +6,9 @@ yarn-error.log*
 package-lock.json
 yarn.lock
 
+# Composer files
+vendor/
+
 # build files
 dist
 dist/icons/svgSprite.js
@@ -22,7 +25,7 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
-vendor/
+
 
 # OS-specific files
 *.DS_Store

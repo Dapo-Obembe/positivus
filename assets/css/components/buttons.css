@@ -1,11 +1,14 @@
 /* Buttons */
+
+.primary-button,
+.secondary-button {
+  @apply max-w-[264px] h-[68px] text-xl leading-7 font-normal py-5 px-[35px] rounded-[14px] flex justify-center items-center gap-2.5 whitespace-nowrap;
+}
+
 .primary-button {
-  @apply bg-primary min-h-[40px] min-w-fit flex items-center whitespace-nowrap overflow-hidden py-1 lg:py-2 px-4 lg:px-6 text-white text-[1rem] uppercase rounded-[30px] hover:bg-secondary transition-all;
+  @apply bg-secondary text-white;
 }
 
 .secondary-button {
-  @apply bg-transparent min-h-[40px] min-w-fit flex items-center whitespace-nowrap overflow-hidden py-1 lg:py-2 px-4 lg:px-6 text-secondary text-[1rem] uppercase border border-secondary rounded-[30px] hover:bg-secondary hover:text-white transition-all;
-}
-.tertiary-button {
-  @apply bg-transparent min-h-[40px] min-w-fit flex items-center whitespace-nowrap overflow-hidden py-1 lg:py-2 px-4 lg:px-6 text-white text-[1rem] uppercase border border-white rounded-[30px] hover:bg-secondary hover:text-white transition-all;
+  @apply bg-transparent text-secondary border border-secondary;
 }

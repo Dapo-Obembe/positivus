@@ -1,0 +1,21 @@
+{
+	"name": "acf/hero-section",
+	"title": "Hero Section",
+	"description": "Insert hero section on your page.",
+	"category": "alpha-web-blocks",
+	"icon": "admin-home",
+	"style": ["awc-tailwind-style", "file:./style.css"],
+	"script": ["hero-section-script"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "render.php"
+	},
+	"supports": {
+		"align": true,
+		"anchor": true,
+		"spacing": {
+			"padding": ["top", "bottom"],
+			"margin": ["top", "bottom"]
+		}
+	}
+}

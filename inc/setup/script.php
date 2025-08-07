@@ -28,8 +28,8 @@ function enqueue_assets_front_n_back() {
 	add_action(
 		'wp_print_footer_scripts',
 		function () {
-			echo '<script type="module" src="http://localhost:9000/@vite/client"></script>' . "\n"; // phpcs:ignore
-			echo '<script type="module" src="http://localhost:9000/assets/js/main.js"></script>' . "\n"; // phpcs:ignore
+			echo '<script type="module" src="http://localhost:3000/@vite/client"></script>' . "\n"; // phpcs:ignore
+			echo '<script type="module" src="http://localhost:3000/assets/js/main.js"></script>' . "\n"; // phpcs:ignore
 		},
 		1
 	);
@@ -37,8 +37,8 @@ function enqueue_assets_front_n_back() {
 	add_action(
 		'admin_print_footer_scripts',
 		function () {
-			echo '<script type="module" src="http://localhost:9000/@vite/client"></script>' . "\n"; // phpcs:ignore
-			echo '<script type="module" src="http://localhost:9000/assets/js/main.js"></script>' . "\n"; // phpcs:ignore
+        echo '<script type="module" src="http://localhost:3000/@vite/client"></script>' . "\n"; // phpcs:ignore
+        echo '<script type="module" src="http://localhost:3000/assets/js/main.js"></script>' . "\n"; // phpcs:ignore
 		},
 		1
 	);
@@ -55,7 +55,7 @@ if ( ! function_exists( 'positivus_asset_loader' ) ) :
 	 * @return void
 	 */
 	function positivus_asset_loader() {
-		$vite_dev_server = 'http://localhost:9000';
+		$vite_dev_server = 'http://localhost:3000';
 
 		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
 			$response = wp_remote_get( $vite_dev_server . '/@vite/client', array( 'timeout' => 1 ) );
