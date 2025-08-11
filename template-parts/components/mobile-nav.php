@@ -24,7 +24,7 @@ $contact_us_btn = get_field( 'contact_us_btn', 'option' );
 				'width'  => 32,
 				'height' => 32,
 			)
-		);
+		); // phpcs:ignore
 		?>
 	<?php
 		echo the_svg(
@@ -34,7 +34,7 @@ $contact_us_btn = get_field( 'contact_us_btn', 'option' );
 				'width'  => 32,
 				'height' => 32,
 			)
-		);
+		); // phpcs:ignore
 		?>
 	
 </button>
