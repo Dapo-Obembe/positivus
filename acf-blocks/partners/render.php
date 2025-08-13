@@ -26,6 +26,7 @@ if ( ! empty( $block['align'] ) ) {
 }
 
 ?>
+
 <section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $block_class ); ?> mt-[70px] flex items-center">
 	
 	<div class="container flex flex-nowrap justify-center gap-10">
@@ -45,7 +46,7 @@ if ( ! empty( $block['align'] ) ) {
 						'large',
 						false,
 						array(
-							'class'   => 'object-cover object-center w-full h-full',
+							'class'   => 'object-contain  w-auto h-12',
 							'loading' => 'eager',
 						)
 					);
@@ -55,8 +56,13 @@ if ( ! empty( $block['align'] ) ) {
 				?>
 				<?php
 			endwhile;
+			?>
+			<?php elseif ( $is_preview ) : ?>
+				<?php // This message shows ONLY in the editor preview when no images are selected. ?>
+			<p style="font-style: italic; color: #666;">Please add partner logos from the block settings.</p>
+				<?php
 		endif;
-		?>
+			?>
 	</div>
 
 </section>
