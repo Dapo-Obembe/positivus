@@ -6,11 +6,15 @@
 
 .header-navigation {
   ul {
-    @apply flex items-center gap-10;
+    @apply flex items-center justify-end;
 
     li {
-      @apply text-xl leading-7 capitalize hover:text-primary transition-all;
+      @apply text-xl leading-7 hover:text-primary transition-all;
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
     }
+
     li.current-menu-item {
       @apply font-bold text-secondary underline underline-offset-4;
     }

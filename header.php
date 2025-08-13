@@ -31,7 +31,7 @@ $contact_us_btn = get_field( 'contact_us_btn', 'option' );
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 
-	<header class="min-h-[68px] flex items-center pb-0 mt-15 border-b-2 border-secondary bg-body-bg sticky z-99999 top-0 px-[1rem] lg:px-[2.5rem]">
+	<header class="min-h-[68px] flex items-center pb-0 mt-15 bg-body-bg sticky z-99999 top-0 px-[1rem] lg:px-[2.5rem]">
 		<div class="container mx-auto flex justify-between items-center">
 			<!-- Logo -->
 			<div class="site-logo">
@@ -46,7 +46,7 @@ $contact_us_btn = get_field( 'contact_us_btn', 'option' );
 				<?php endif; ?>
 			</div>
 
-			<nav class="header-navigation hidden lg:flex flex-nowrap gap-8 items-center" role="navigation">
+			<nav class="header-navigation hidden lg:flex flex-nowrap justify-end items-center gap-10" role="navigation">
 				<?php
 				wp_nav_menu(
 					array(
@@ -58,7 +58,7 @@ $contact_us_btn = get_field( 'contact_us_btn', 'option' );
 				);
 				?>
 
-				<div class="header-cta ml-[2rem]">
+				<div class="header-cta">
 
 					<?php
 					if ( ! empty( $contact_us_btn ) ) :

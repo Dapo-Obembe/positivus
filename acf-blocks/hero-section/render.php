@@ -39,10 +39,10 @@ else :
 
 	?>
 
-<section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $block_class ); ?> min-h-screen bg-primary">
+<section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $block_class ); ?> mt-[70px] flex items-center">
 	
 	<div class="container flex flex-wrap lg:flex-nowrap justify-between gap-10">
-		<div class="basis-[100%] lg:basis-[50%]">
+		<div class="basis-[100%] lg:basis-[50%]  flex flex-col gap-[35px]">
 			<?php if ( ! empty( $hero_section_title ) ) : ?>
 				<h1><?php echo esc_html( $hero_section_title ); ?></h1>
 				<?php else : ?>
@@ -50,7 +50,7 @@ else :
 			<?php endif; ?>
 
 			<?php if ( ! empty( $hero_section_description ) ) : ?>
-				<p><?php echo esc_html( $hero_section_description ); ?></p>
+				<p class="leading-7 text-xl max-w-[498px]"><?php echo esc_html( $hero_section_description ); ?></p>
 				<?php else : ?>
 					<p><?php echo esc_html__( 'Edit the description in the backend', 'positivus' ); ?></p>
 			<?php endif; ?>

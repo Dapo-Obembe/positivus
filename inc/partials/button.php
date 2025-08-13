@@ -20,6 +20,11 @@ function awc_button( $text, $url = '#', $variant = 'primary', $classes = '' ) {
 		'custom'    => 'py-2 px-8 rounded-full whitespace-nowrap',
 	);
 
+	// Check if in the admin/editor screen.
+	if ( is_admin() ) {
+		$url = '#';
+	}
+
 	// Check if variant exists, otherwise use the primary as default.
 	$variant_classes = $variants[ $variant ] ?? $variants['primary'];
 
