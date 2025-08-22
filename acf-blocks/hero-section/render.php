@@ -44,7 +44,7 @@ else :
 	<div class="container flex flex-wrap lg:flex-nowrap justify-between gap-10">
 		<div class="basis-[100%] lg:basis-[50%]  flex flex-col gap-[35px]">
 			<?php if ( ! empty( $hero_section_title ) ) : ?>
-				<h1><?php echo esc_html( $hero_section_title ); ?></h1>
+				<h1><?php echo wp_kses_post( $hero_section_title ); ?></h1>
 				<?php else : ?>
 					<h1><?php echo esc_html__( 'This is the title for this section', 'positivus' ); ?></h1>
 			<?php endif; ?>

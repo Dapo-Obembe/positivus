@@ -101,6 +101,18 @@ html {
   }
 }
 
+.grey {
+  @apply bg-accent;
+}
+
+.green {
+  @apply bg-primary;
+}
+
+.black {
+  @apply bg-secondary;
+}
+
 h1,
 h2,
 h3,

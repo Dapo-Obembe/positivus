@@ -1,0 +1,5 @@
+.services {
+  .service-card {
+    @apply w-[600px] h-[310px] flex justify-between rounded-[45px] p-[50px] border border-b-8 border-secondary;
+  }
+}
