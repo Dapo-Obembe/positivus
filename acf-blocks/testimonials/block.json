@@ -1,0 +1,21 @@
+{
+	"name": "acf/testimonials",
+	"title": "Testimonials",
+	"description": "Show testimonials inside any post",
+	"category": "alpha-web-blocks",
+	"icon": "comments",
+	"style": ["awc-tailwind-style", "swiper-style", "file:./style.css"],
+	"script": ["swiper-script", "testimonials-script"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "render.php"
+	},
+	"supports": {
+		"align": true,
+		"anchor": true,
+		"spacing": {
+			"padding": ["top", "bottom"],
+			"margin": ["top", "bottom"]
+		}
+	}
+}

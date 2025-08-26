@@ -86,6 +86,7 @@ function register_script_for_block() {
 
 	// Register Swiper assets once, so any block can declare them as a dependency.
 	wp_register_style( 'swiper-style', get_stylesheet_directory_uri() . '/assets/swiperjs/swiper-bundle.min.css', array(), null ); // phpcs:ignore
+
 	wp_register_script( 'swiper-script', get_stylesheet_directory_uri() . '/assets/swiperjs/swiper-bundle.min.js', array(), null, true ); // phpcs:ignore
 
 	$is_local = wp_get_environment_type() === 'local';
@@ -139,7 +140,7 @@ function register_script_for_block() {
 			wp_register_script(
 				$script_handle,
 				$script_uri,
-				array( 'swiper-script' ),
+				array(),
 				filemtime( $script_path ),
 				true
 			);
