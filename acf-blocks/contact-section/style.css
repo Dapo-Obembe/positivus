@@ -1,0 +1,52 @@
+.contact {
+  .contact-wrapper {
+    .left {
+      .psv-form {
+        .wpcf7 p {
+          @apply mb-4 font-semibold text-xl lg:text-2xl text-black;
+        }
+
+        .wpcf7 input:not([type="submit"]),
+        .wpcf7 textarea {
+          @apply w-full bg-transparent !pl-0 px-4 py-1 border-b border-gray-400 focus:border-primary focus:bg-transparent outline-none transition-colors;
+
+          &::placeholder {
+            @apply text-gray-400 !text-sm;
+          }
+
+          &:-webkit-autofill,
+          &:-webkit-autofill:hover,
+          &:-webkit-autofill:focus,
+          &:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px var(--color-secondary) inset !important;
+            -webkit-text-fill-color: white !important;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+        .wpcf7 textarea {
+          @apply h-20 resize-y;
+        }
+
+        .wpcf7-submit {
+          @apply bg-accent text-lg uppercase text-white px-6 py-3 rounded-[30px] hover:bg-primary transition-colors cursor-pointer;
+        }
+        .wpcf7 .wpcf7-not-valid-tip {
+          @apply text-red-600 text-sm mt-1;
+        }
+        .wpcf7 .wpcf7-response-output {
+          @apply mt-4 p-4 rounded-md;
+        }
+        .wpcf7 .wpcf7-response-output {
+          @apply bg-yellow-100 text-secondary border-yellow-300;
+        }
+        .wpcf7 .wpcf7-response-output.wpcf7-validation-errors {
+          @apply bg-yellow-100 text-yellow-800 border-yellow-300;
+        }
+        .wpcf7 .wpcf7-response-output.wpcf7-mail-sent-ok {
+          @apply bg-green-100 text-green-800 border-green-300;
+        }
+      }
+    }
+  }
+}
