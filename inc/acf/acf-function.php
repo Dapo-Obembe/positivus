@@ -144,6 +144,15 @@ function register_script_for_block() {
 				filemtime( $script_path ),
 				true
 			);
+
+			wp_localize_script(
+				'country-script',
+				'mycountry_ajax_obj',
+				array(
+					'ajax_url' => admin_url( 'admin-ajax.php' ),
+					'nonce'    => wp_create_nonce( 'mycountry-nonce' ),
+				)
+			);
 		}
 	}
 }

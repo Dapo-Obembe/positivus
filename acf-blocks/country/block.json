@@ -1,0 +1,21 @@
+{
+	"name": "acf/country",
+	"title": "Country",
+	"description": "Show country block on any page or post",
+	"category": "alpha-web-blocks",
+	"icon": "format-chat",
+	"style": ["awc-tailwind-style", "file:./style.css"],
+	"script": ["country-script"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "render.php"
+	},
+	"supports": {
+		"align": true,
+		"anchor": true,
+		"spacing": {
+			"padding": ["top", "bottom"],
+			"margin": ["top", "bottom"]
+		}
+	}
+}

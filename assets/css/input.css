@@ -94,8 +94,8 @@ html {
   @apply transition-all duration-300 ease-in;
   &.dark {
     --background: #0c0c0c;
-    --foreground: #ededed;
-    --color-text: #f1f5f9;
+    /* --foreground: #ededed;
+    --color-text: #f1f5f9; */
     --color-border: #1f2937;
     --color-body-bg: #0f172a;
   }

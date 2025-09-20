@@ -1,0 +1,22 @@
+.mycountry {
+  h1 {
+    span {
+      color: #fff599;
+      font-weight: 400;
+      letter-spacing: 10px;
+      padding-top: 5px;
+      text-transform: uppercase;
+      border-left: 4px solid #fff599;
+      padding-left: 15px;
+      border-right: 4px solid #fff599;
+      animation: span 1s ease;
+    }
+  }
+  #search-result h3 {
+    @apply text-xl text-[#fff599] uppercase p-1 font-semibold block leading-tight;
+
+    span {
+      @apply text-white;
+    }
+  }
+}
